@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">project ammu</string>
+    <string name="accessibility_service_description">Ammu No Touch Control lets voice commands scroll, go back, go home, and open recent apps after you enable this service.</string>
+</resources>

@@ -4,6 +4,7 @@
 /local.properties
 .idea/
 .DS_Store
+*.swp
 /build/
 /app/build/
 /captures

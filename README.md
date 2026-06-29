@@ -51,4 +51,8 @@ Copy `local.properties.example` to `local.properties` and fill the required priv
 
 ## Documentation
 
-See `REQUIREMENTS.md` for project setup, permissions, configuration, and testing details.
+See these files for project setup, explanation, and presentation material:
+
+- `REQUIREMENTS.md` - setup, permissions, configuration, and testing details
+- `docs/Ammu_ProjectAir_Presentation.pptx` - PowerPoint presentation with working diagrams
+- `docs/Ammu_ProjectAir_Project_Report.pdf` - PDF project description, workflow, requirements, and run guide

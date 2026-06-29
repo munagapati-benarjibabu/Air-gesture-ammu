@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Air Gesture Ammu</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #102028;
+      --muted: #54656f;
+      --line: #d7e1e7;
+      --panel: #f6fafc;
+      --accent: #0f7f89;
+      --accent-dark: #075c65;
+      --soft: #e7f4f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.55;
+    }
+
+    header {
+      background:
+        linear-gradient(120deg, rgba(15, 127, 137, 0.92), rgba(13, 58, 70, 0.94)),
+        radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.22), transparent 28%);
+      color: #ffffff;
+      padding: 56px 20px 48px;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.25rem, 6vw, 4.25rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    main {
+      padding: 36px 20px 52px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a.button.secondary {
+      color: var(--accent-dark);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    section {
+      margin-top: 36px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      min-height: 132px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p,
+    li {
+      color: var(--muted);
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .step {
+      padding: 14px;
+      border-radius: 8px;
+      background: var(--soft);
+      border: 1px solid #c5e2e5;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-align: center;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 20px;
+      color: var(--muted);
+      background: #fbfdfe;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Air Gesture Ammu</h1>
+      <p class="lead">
+        Android voice and air-gesture assistant using CameraX, MediaPipe Hands,
+        Accessibility Service actions, speech commands, sensor controls, and lost-phone tracking.
+      </p>
+      <div class="actions">
+        <a class="button" href="Ammu_ProjectAir_Presentation.pptx">Download PPT</a>
+        <a class="button secondary" href="Ammu_ProjectAir_Project_Report.pdf">Open PDF Report</a>
+        <a class="button secondary" href="https://github.com/munagapati-benarjibabu/Air-gesture-ammu">View Source</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Project Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Air Gestures</h3>
+          <p>Detects swipe, open palm, and fist gestures from the front camera and maps them to phone actions.</p>
+        </article>
+        <article class="card">
+          <h3>Voice Assistant</h3>
+          <p>Uses Android speech recognition and text-to-speech for Ammu assistant commands.</p>
+        </article>
+        <article class="card">
+          <h3>Accessibility Control</h3>
+          <p>Runs scroll, back, home, recent apps, and media controls through Android services.</p>
+        </article>
+        <article class="card">
+          <h3>Lost-Phone Tracking</h3>
+          <p>Sends scheduled location email updates when the configured recovery mode is activated.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <div class="flow">
+        <div class="step">Camera Input</div>
+        <div class="step">Hand Landmarks</div>
+        <div class="step">Gesture Logic</div>
+        <div class="step">Command Mapping</div>
+        <div class="step">Android Action</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Run The Project</h2>
+      <ul>
+        <li>Open the project in Android Studio with JDK 17 or newer.</li>
+        <li>Connect an Android phone with USB debugging enabled.</li>
+        <li>Build with <strong>./gradlew :app:assembleDebug</strong>.</li>
+        <li>Install with <strong>./gradlew :app:installDebug</strong>.</li>
+        <li>Enable microphone, camera, location, notification, and accessibility permissions on the phone.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Air Gesture Ammu project documentation and demo page.</div>
+  </footer>
+</body>
+</html>
